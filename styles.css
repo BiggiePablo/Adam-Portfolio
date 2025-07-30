@@ -233,7 +233,6 @@ input, textarea, select {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: fadeInRight 1s ease 0.5s both;
 }
 
 .image-placeholder {
@@ -689,6 +688,15 @@ section {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    /* Disable all animations on mobile */
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0s !important;
+        animation-delay: 0s !important;
+        transition-duration: 0s !important;
+    }
+
     .nav-menu {
         position: fixed;
         left: -100%;
@@ -776,6 +784,15 @@ section {
 }
 
 @media (max-width: 480px) {
+    /* Disable all animations on small mobile devices */
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0s !important;
+        animation-delay: 0s !important;
+        transition-duration: 0s !important;
+    }
+
     .container {
         padding: 0 15px;
     }
