@@ -24,6 +24,18 @@ p {
     color: #000000 !important;
 }
 
+/* Specific overrides for paragraph elements */
+.hero-description,
+.about-text p,
+section p,
+.about-highlight {
+    color: #000000 !important;
+    -webkit-text-fill-color: #000000 !important;
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    background-clip: unset !important;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
