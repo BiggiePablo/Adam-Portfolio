@@ -64,7 +64,8 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Intersection Observer for scroll animations
+// DISABLED: Intersection Observer for scroll animations - causes unwanted movement
+/*
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -90,6 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 });
+*/
 
 // Contact form handling
 const contactForm = document.getElementById('contact-form');
