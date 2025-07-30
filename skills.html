@@ -17,6 +17,18 @@
             -webkit-text-fill-color: #000000 !important;
         }
         
+        /* Ensure all skill items are visible */
+        .skill-category, .skill-item, .skill-item span {
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+        
+        /* Make sure Heavy Machinery section is visible */
+        .skill-category:last-child {
+            display: block !important;
+        }
+        
         /* Disable only problematic animations on mobile */
         @media (max-width: 768px) {
             * {
