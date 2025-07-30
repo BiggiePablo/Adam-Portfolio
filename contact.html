@@ -9,24 +9,21 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* ULTIMATE FORCE - Override ALL styling */
-        * {
+        /* Targeted fixes - keep the design but fix specific issues */
+        
+        /* Force ONLY paragraph text to be black */
+        p, p * {
             color: #000000 !important;
             -webkit-text-fill-color: #000000 !important;
-            background-image: none !important;
-            background: transparent !important;
-            -webkit-background-clip: unset !important;
-            background-clip: unset !important;
-            animation: none !important;
-            transform: none !important;
-            transition: none !important;
         }
         
-        /* Keep only essential background colors for layout */
-        body, html { background-color: white !important; }
-        .navbar { background-color: white !important; }
-        .btn-primary { background-color: #8B4513 !important; color: white !important; }
-        .btn-secondary { background-color: transparent !important; border: 2px solid #8B4513 !important; color: #8B4513 !important; }
+        /* Disable only problematic animations on mobile */
+        @media (max-width: 768px) {
+            * {
+                animation: none !important;
+                transform: none !important;
+            }
+        }
     </style>
 </head>
 <body>
