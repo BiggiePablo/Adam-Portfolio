@@ -29,11 +29,68 @@
             display: block !important;
         }
         
-        /* Disable only problematic animations on mobile */
+        /* Improved alignment for skills grid */
+        .skills-grid {
+            display: grid !important;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+            gap: 2rem !important;
+            margin-top: 2rem !important;
+            justify-content: center !important;
+            align-items: stretch !important;
+        }
+        
+        .skill-category {
+            display: flex !important;
+            flex-direction: column !important;
+            height: 100% !important;
+            min-height: 300px !important;
+        }
+        
+        .skill-category h3 {
+            text-align: center !important;
+            margin-bottom: 1.5rem !important;
+            font-size: 1.4rem !important;
+            color: #8B4513 !important;
+        }
+        
+        .skill-items {
+            display: grid !important;
+            grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)) !important;
+            gap: 1rem !important;
+            flex-grow: 1 !important;
+            align-content: start !important;
+        }
+        
+        .skill-item {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: center !important;
+            text-align: center !important;
+            padding: 1rem 0.5rem !important;
+            min-height: 80px !important;
+        }
+        
+        /* Responsive adjustments for skills */
         @media (max-width: 768px) {
             * {
                 animation: none !important;
                 transform: none !important;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr !important;
+                gap: 1.5rem !important;
+            }
+            
+            .skill-items {
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)) !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .skill-items {
+                grid-template-columns: repeat(2, 1fr) !important;
             }
         }
     </style>
