@@ -10,10 +10,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         /* Force all text to be black */
-        p, span, div, h1, h2, h3, h4, h5, h6 {
+        p, span, div, h1, h2, h3, h4, h5, h6, strong {
             color: #000000 !important;
             -webkit-text-fill-color: #000000 !important;
             background: none !important;
+            -webkit-background-clip: unset !important;
+            background-clip: unset !important;
+        }
+        
+        /* Completely disable all animations and transforms to prevent movement */
+        *, *::before, *::after {
+            animation: none !important;
+            transform: none !important;
+            transition: none !important;
         }
     </style>
 </head>

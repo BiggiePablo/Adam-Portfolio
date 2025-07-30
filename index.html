@@ -10,10 +10,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         /* Force all text to be black */
-        p, span, div, h1, h2, h3, h4, h5, h6 {
+        p, span, div, h1, h2, h3, h4, h5, h6, strong {
             color: #000000 !important;
             -webkit-text-fill-color: #000000 !important;
             background: none !important;
+            -webkit-background-clip: unset !important;
+            background-clip: unset !important;
+        }
+        
+        /* Completely disable all animations and transforms to prevent movement */
+        *, *::before, *::after {
+            animation: none !important;
+            transform: none !important;
+            transition: none !important;
+        }
+        
+        /* Fix profile image position */
+        .profile-image, .hero-image, .profile-photo {
+            position: static !important;
+            transform: none !important;
+            animation: none !important;
         }
     </style>
 </head>
@@ -69,7 +85,7 @@
             <div class="about-content">
                 <div class="about-text">
                     <p class="about-highlight" style="color: #000000 !important; background: none !important; -webkit-text-fill-color: #000000 !important;">
-                         Welcome to my portfolio, I'm <strong>Adam Gibrine</strong>, a passionate and dedicated web developer from Kumasi, Ghana, with a keen eye for design and a love for creating digital experiences that make a real difference in people's lives.
+                         Welcome to my portfolio! I'm <strong>Adam Gibrine</strong>, a passionate and dedicated web developer from Kumasi, Ghana, with a keen eye for design and a love for creating digital experiences that make a real difference in people's lives. Beyond coding, I'm also a certified excavator and mobile crane operator with almost 4 years of hands-on experience in heavy machinery operations.
                     </p>
                     <p style="color: #000000 !important;">
                          With expertise in both front-end and back-end development, I specialize in building complete, scalable solutions from initial concept to final deployment. My passion lies in crafting clean, efficient code and delivering exceptional user experiences that exceed expectations.
