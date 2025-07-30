@@ -11,15 +11,50 @@
     <style>
         /* Targeted fixes - keep the design but fix specific issues */
         
-        /* Force ONLY paragraph text to be black */
-        p, p * {
+        /* Force ONLY main content paragraph text to be black, preserve contact styling */
+        .contact-content p {
             color: #000000 !important;
             -webkit-text-fill-color: #000000 !important;
         }
         
+        /* Keep contact method text readable but maintain design */
+        .contact-method p {
+            color: #000000 !important;
+        }
+        
+        /* Preserve other design elements */
+        .contact-method h4 {
+            color: #8B4513 !important;
+        }
+        
+        .section-title {
+            color: #8B4513 !important;
+        }
+        
+        .contact-info h3 {
+            color: #8B4513 !important;
+        }
+        
+        /* Ensure form elements are visible */
+        .contact-form {
+            background: rgba(255, 255, 255, 0.95) !important;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            color: #333 !important;
+            background: white !important;
+            border: 1px solid #ddd !important;
+        }
+        
+        .btn-primary {
+            background: #8B4513 !important;
+            color: white !important;
+        }
+        
         /* Disable only problematic animations on mobile */
         @media (max-width: 768px) {
-            * {
+            .contact-content, .contact-form {
                 animation: none !important;
                 transform: none !important;
             }
