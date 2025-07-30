@@ -668,18 +668,8 @@ section {
     margin-bottom: 0.5rem;
 }
 
-/* Responsive Design - Disabled for consistent desktop experience */
-/* 
-Note: Mobile responsiveness has been disabled to maintain desktop layout on all devices.
-Users can zoom in/out on mobile devices to view content properly.
-*/
-
-/* Keep only essential mobile navigation functionality */
+/* Responsive Design */
 @media (max-width: 768px) {
-    .nav-toggle {
-        display: flex;
-    }
-    
     .nav-menu {
         position: fixed;
         left: -100%;
@@ -697,6 +687,10 @@ Users can zoom in/out on mobile devices to view content properly.
         left: 0;
     }
 
+    .nav-toggle {
+        display: flex;
+    }
+
     .nav-toggle.active .bar:nth-child(2) {
         opacity: 0;
     }
@@ -708,6 +702,88 @@ Users can zoom in/out on mobile devices to view content properly.
     .nav-toggle.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .profile-image {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+    }
+
+    .about-stats {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 60px 0;
+    }
 }
 
-/* Remove all other mobile-specific styles to maintain desktop layout */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .project-content {
+        padding: 1rem;
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+    }
+
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+}
