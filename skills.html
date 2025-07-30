@@ -32,11 +32,17 @@
         /* Improved alignment for skills grid */
         .skills-grid {
             display: grid !important;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+            grid-template-columns: repeat(3, 1fr) !important;
             gap: 2rem !important;
             margin-top: 2rem !important;
             justify-content: center !important;
             align-items: stretch !important;
+        }
+        
+        /* Position the 4th item (Tools & Technologies) below the 2nd item (Heavy Machinery) */
+        .skill-category:nth-child(4) {
+            grid-column: 2 !important;
+            grid-row: 2 !important;
         }
         
         .skill-category {
@@ -81,6 +87,11 @@
             .skills-grid {
                 grid-template-columns: 1fr !important;
                 gap: 1.5rem !important;
+            }
+            
+            .skill-category:nth-child(4) {
+                grid-column: 1 !important;
+                grid-row: auto !important;
             }
             
             .skill-items {

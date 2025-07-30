@@ -20,11 +20,17 @@
         /* Improved alignment for projects grid */
         .projects-grid {
             display: grid !important;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+            grid-template-columns: repeat(3, 1fr) !important;
             gap: 2rem !important;
             margin-top: 2rem !important;
             justify-content: center !important;
             align-items: stretch !important;
+        }
+        
+        /* Position the 4th project (School Portal) below the 2nd project (AgriMarket) */
+        .project-card:nth-child(4) {
+            grid-column: 2 !important;
+            grid-row: 2 !important;
         }
         
         .project-card {
@@ -74,6 +80,11 @@
             .projects-grid {
                 grid-template-columns: 1fr !important;
                 gap: 1.5rem !important;
+            }
+            
+            .project-card:nth-child(4) {
+                grid-column: 1 !important;
+                grid-row: auto !important;
             }
             
             .project-card {
